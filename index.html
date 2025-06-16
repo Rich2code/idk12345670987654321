@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>People's Lists</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .gold-big li {
+      background: gold;
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 5px 0;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .blue-small li {
+      background: #007BFF;
+      color: white;
+      font-size: 14px;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    .grey-regular li {
+      background: #ccc;
+      color: #222;
+      font-size: 18px;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <ul id="goldList" class="gold-big"></ul>
+
+  <ul id="blueList" class="blue-small"></ul>
+
+  <ul id="greyList" class="grey-regular"></ul>
+
+  <script>
+    const goodPeople = ["Thomas","Yimika","Amelia","Reuben",];
+    const otherPeople = [];
+    const regularPeople = [];
+
+    const addToList = (names, elementId) => {
+      const list = document.getElementById(elementId);
+      names.forEach(name => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        list.appendChild(li);
+      });
+    };
+
+    addToList(goodPeople, "goldList");
+    addToList(otherPeople, "blueList");
+    addToList(regularPeople, "greyList");
+  </script>
+</body>
+</html>
